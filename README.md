@@ -1,16 +1,23 @@
 # Weather Code challenge
 
-We need to create a solution to determine if a city is having **good weather** or **bad weather**, but if is it bad weather also we need to get details of that. For example, if we want to look at the weather of Barcelona city (guess that now is raining in Barcelona) we should expect something like this output "In Barcelona is having bad weather because is raining". This kind of thing should be clearly defined by the candidate and should be reflected in the tests **OpenWeatherMapClientTests** (that is also incompleted).
+The solution has to determine if a city is having **good weather** or **bad weather**, and when is bad weather also get details about it. 
 
-To do that we have access to an open weather map API to make a request and take the parameters (aka sensors) of the weather.
+For example, if we want to look at the weather of Barcelona city, and is raining, the expected output should be something like this:
 
-The solution has an incomplete service WeatherDetectorService, that taking sensors should determine if is having good weather and also if it is bad weather including the detailed reason.
+ "Bad weather in Barcelona because is raining". 
+ 
+ The output should be clearly defined by the candidate and should be reflected in the tests **OpenWeatherMapClientTests** (that is incompleted).
 
-As part of the code challenge, we want to store this on a repository (preferably in Entity Framework Core, using an in-memory option database will be enough).
+To get the weather inout the candidate can have access to an open weather map API to make a request and take the parameters (aka sensors) of the weather.
 
-We have an incompleted solution and the candidate should finish and connect the incompleted parts. Taking into account:
+The solution has an incomplete service *WeatherDetectorService* that should take *sensors* to determine if is having good or bad weather and including the detailed reason if bad weather.
 
-1. Define the properties that model Weather needs to store all the data.
+The waether information must be stored on a repository (preferably in Entity Framework Core, using an in-memory option database will be enough).
+
+An incompleted solution is provided to the candidate that should be finished connecting incomplete parts,
+taking into account:
+
+1. Define model Weather properties needed to store all the data.
 2. Implement interface IWeatherClient to make the calls to OpenWeatherMap API
 3. Implement interface IWeatherRepository to store the defined model Weather
 4. Complete the endpoints GET and POST from WeatherController
@@ -25,9 +32,7 @@ Weather API [OpenWeatherMap.org](https://openweathermap.org/current)
 ## Goals to evaluate
 
 - How the candidate focus the solution
-
-- How you approach the project (we left some stuff intentionally open, so you have to evaluate trade-offs and make some decisions)
-
+- How you approach the project 
 - Design and architecture
 - How the code is writed
 - Solution testing
